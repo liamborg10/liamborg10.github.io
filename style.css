@@ -872,6 +872,9 @@ footer {
     }
 
     .photo-carousel-track .dock-item.photo-landscape {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         height: clamp(160px, 23vh, 206px);
         align-self: center;
         margin-top: 0;
