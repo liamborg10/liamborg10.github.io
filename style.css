@@ -872,8 +872,9 @@ footer {
     }
 
     .photo-carousel-track .dock-item.photo-landscape {
-        height: clamp(160px, 23vh, 208px);
-        margin-top: clamp(24px, 4vh, 42px);
+        height: clamp(160px, 23vh, 206px);
+        align-self: center;
+        margin-top: 0;
     }
 
     .carousel-nav-button {
@@ -947,6 +948,11 @@ footer {
     .hero h1 {
         font-size: 1.7rem;
     }
+
+    .hero p {
+        font-size: 0.86rem;
+        line-height: 1.28;
+    }
     
     .portfolio-container, .photography-grid {
         grid-template-columns: minmax(0, 340px) !important;
@@ -963,7 +969,8 @@ footer {
 
     .photo-carousel-track .dock-item.photo-landscape {
         height: clamp(150px, 21vh, 184px);
-        margin-top: clamp(34px, 5vh, 54px);
+        align-self: center;
+        margin-top: 0;
     }
 
     .dock-carousel-track {
