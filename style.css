@@ -151,6 +151,22 @@ header {
     color: var(--text-muted);
 }
 
+a,
+button,
+.portfolio-item,
+.section-back-btn,
+.dock-item {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+.portfolio-item:focus:not(:focus-visible),
+.section-back-btn:focus:not(:focus-visible),
+.dock-item:focus:not(:focus-visible) {
+    outline: none;
+}
+
 .nav-link.current {
     color: var(--text-muted);
 }
