@@ -1374,6 +1374,19 @@
         section.classList.toggle('is-centered-landscape', isCenteredLandscape);
     }
 
+    function getPhotoOrientationItem(trackObj, centeredItem) {
+        if (
+            trackObj?.element?.classList?.contains('photo-carousel-track')
+            && trackObj.element.classList.contains('photo-gallery-returning')
+            && state.photoSpotlightTrack === trackObj
+            && state.photoSpotlightItem
+        ) {
+            return state.photoSpotlightItem;
+        }
+
+        return centeredItem;
+    }
+
     function writeItemMotion(item, transform, opacity, zIndex) {
         const last = item.__portfolioMotion || {};
 
@@ -1468,7 +1481,7 @@
         });
 
         if (showExpandHint) {
-            syncCenteredPhotoOrientation(trackObj, hintItem);
+            syncCenteredPhotoOrientation(trackObj, getPhotoOrientationItem(trackObj, hintItem));
             setPhotoExpandHint(trackObj, hintItem);
         } else {
             syncCenteredPhotoOrientation(trackObj, null);
